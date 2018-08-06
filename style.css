@@ -1,0 +1,214 @@
+/*
+Theme Name: theme002
+Theme URI: toshikisugiyama.com
+Author: toshikisugiyama
+Author URI: toshikisugiyama.com
+Description: toshikisugiyama
+Version: 1.0
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Verdana;
+  display: block;
+  background-color: #ebebed;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+
+p {
+  padding-bottom: 14px;
+  display: block;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+/* header */
+header {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #293340;
+}
+
+  header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  header a {
+    color: #fff;
+    position: relative;
+    z-index: 99;
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 100%;
+  }
+
+    .menu ul {
+      /*margin: 0;
+      padding: 0;
+      list-style: none;*/
+      text-align: right;
+    }
+
+    .menu li {
+      /*width: 20%;
+      text-align: right;
+      display: inline-block;*/
+      display: inline;
+      padding: 0 10px;
+    }
+
+/* main */
+main {
+  position: relative;
+}
+
+  .top {
+    margin-top: 60px;
+    position: relative;
+    top: 0;
+    background-color: #fff;
+    margin-bottom: 80px;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+    .top-img-container {
+    }
+
+    .top-img {
+      width: 100%;
+    }
+
+    .top-title {
+      position: absolute;
+      bottom: 0;
+      padding: 20px 40px;
+    }
+
+    .top-title a {
+    }
+
+    .article-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 40px;
+      padding-left: 40px;
+      margin-bottom: 80px;
+    }
+
+
+      .article {
+        border-radius: 3px;
+        position: relative;
+        min-height: 300px;
+        float: left;
+        margin-bottom: 10px;
+        background-color: #fff;
+        width: 100%;
+      }
+
+      .sub {
+        background-color: #293340;
+      }
+
+        .sub a {
+          color: #fff;
+        }
+
+        .img-container {
+          border-radius: 3px 3px 0 0;
+          overflow: hidden;
+        }
+
+        .article-large {
+          width: 66%;
+        }
+
+        .article-left {
+          margin: 0 1% 10px 0;
+        }
+
+        .article-large .article-img, .article-small .article-img {
+          width: 100%;
+        }
+
+        .article-small {
+          width: 33%;
+        }
+
+        .article-content {
+          padding: 5% 10%;
+        }
+
+          .article-title {
+          }
+
+  .clear {
+    clear: both;
+  }
+
+@media (max-width: 700px) {
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    text-align: center;
+  }
+  .top {
+    margin-bottom: 10px;
+  }
+  .article-large, .article-small {
+    width: 100%;
+  }
+  .article-left {
+    margin-right: 0;
+  }
+}
+
+/* footer */
+footer {
+  width: 100%;
+  background-color: #293340;
+  position: absolute;
+  left: 0;
+}
+
+  #footer p {
+    color: #fff;
+  }

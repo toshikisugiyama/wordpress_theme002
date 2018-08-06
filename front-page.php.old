@@ -1,0 +1,75 @@
+<?php
+/*
+Template Name: front page 001
+*/
+?>
+
+<?php get_header(); ?>
+  <main id="main">
+    <div class="top">
+      <div class="top-img-container">
+        <a href="<?php $url = home_url('/introduction'); echo esc_url($url); ?>">
+          <picture>
+            <source srcset="<?php echo get_the_post_thumbnail_url('introduction'); ?>" media="(max-width: 699px)">
+            <img src="<?php echo get_the_post_thumbnail_url(56); ?>" class="top-img">
+          </picture>
+        </a>
+      </div><!-- /top-img-container -->
+      <div class="top-title">
+        <h2><a href="<?php echo esc_url($url); ?>"><?php $post_id =56; $post = get_post($post_id, 'OBJECT', 'raw'); $post_include = apply_filters('the_title', $post->post_title); echo $post_include; ?></a></h2>
+      </div><!-- /top-title -->
+    </div><!-- /top -->
+
+
+
+    <div class="article-wrapper container">
+      <article class="article article-large article-left">
+        <div class="img-container">
+          <a href="#">
+            <picture>
+              <source srcset="img/img620×620.jpg" media="(max-width: 699px)">
+              <img src="<?php echo the_post_thumbnail_url(676, 338); ?>" class="article-img">
+            </picture>
+          </a>
+        </div><!-- /img-container -->
+        <div class="article-content">
+          <h2 class="article-title"><a href=""><?php single_post_title(); ?></a></h2>
+        </div><!-- /article-content -->
+      </article>
+      <article class="article article-small">
+        <div class="img-container">
+          <a href="#">
+            <picture>
+              <source srcset="img/img620×620.jpg" media="(max-width: 699px)">
+              <img src="<?php echo the_post_thumbnail_url(620, 620); ?>" class="article-img">
+            </picture>
+          </a>
+        </div><!-- /img-container -->
+        <div class="article-content">
+          <h2 class="article-title"><a href="#">Title</a></h2>
+        </div><!-- /article-content -->
+      </article>
+
+
+      <?php get_sidebar(); ?>
+
+
+      <article class="article article-large">
+        <div class="img-container">
+          <a href="#">
+            <picture>
+              <source srcset="img/img620×620.jpg" media="(max-width: 699px)">
+              <img src=""<?php echo the_post_thumbnail_url(676, 338); ?>"" class="article-img">
+            </picture>
+          </a>
+        </div><!-- /img-container -->
+        <div class="article-content">
+          <h2 class="article-title"><a href="#">Title</a></h2>
+        </div><!-- /article-content -->
+      </article>
+    </div><!-- /article-wrapper -->
+
+    
+    <div class="clear"></div>
+  </main>
+<?php get_footer(); ?>
